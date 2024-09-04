@@ -2,7 +2,7 @@
 
 <h3 class="mt-5 mb-3">Reservation List</h3>
 
-<table class="table table-striped">
+<table *ngIf="reservations.length; else noReservation" class="table table-striped">
   <thead>
     <tr>
       <th>Guest</th>
@@ -21,7 +21,7 @@
       <td>{{ reservation.checkInDate }} </td>
       <td>{{ reservation.checkOutDate }} </td>
       <td>
-        <button class="btn btn-sm btn-danger mx-1" (click)="deleteReservation( reservation.id )" >Delete</button>
+        <button class="btn btn-sm btn-danger mx-1" (click)="deleteReservation( reservation )" >Delete</button>
         <button class="btn btn-sm btn-secondary mx-1" [routerLink]="['/edit', reservation.id]">Edit Reservation</button>
       </td>
     </tr>

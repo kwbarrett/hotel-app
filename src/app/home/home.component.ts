@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ReservationListComponent } from '../reservation-list/reservation-list.component';
 
 @Component({
   selector: 'app-home',
